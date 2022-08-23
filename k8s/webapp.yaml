@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: my-app1
 spec:
   strategy: 
     type: Recreate
@@ -15,11 +15,11 @@ spec:
         app: my-app
     spec:
       containers:
-        - name: my-app
-          image: ///////devopstrainingschool/knote-jenkins:71706968676665v1
+        - name: my-app1
+          image: devopstrainingschool/knote-jenkins:71
           ports:
             - containerPort: 8080
           env:
-            - name: MONGO_URL
-              value: mongodb://my-db-service:27017/dev
+            - name: MONGO_URL1
+              value: mongodb://my-db-service1:27017/dev
           imagePullPolicy: Always
