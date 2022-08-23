@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-db
+  name: my-db1
 spec:
   selector:
     matchLabels:
@@ -12,7 +12,7 @@ spec:
         app: my-db
     spec:
       containers:
-        - name: my-db
+        - name: my-db1
           image: mongo
           ports:
             - containerPort: 27017
